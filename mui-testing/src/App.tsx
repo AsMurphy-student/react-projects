@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Paper, styled, Typography } from '@mui/material';
+import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Paper, styled, Typography } from '@mui/material';
 import ButtonAppBar from './components/AppBar';
 import StickyFooter from './components/Footer';
 
@@ -60,7 +60,7 @@ function App() {
     // </Container>
     // <ResponsiveAppBar />
     // <ButtonAppBar theme={theme} />
-    <StickyFooter theme={theme} />
+    <ButtonAppBar theme={theme} />
   );
 }
 

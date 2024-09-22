@@ -27,10 +27,12 @@ export default function ButtonAppBar(props: {theme: Theme}) {
             >
               <MenuIcon />
             </IconButton> */}
-            {/* <Typography variant="h6" component="div">
-              News
-            </Typography> */}
-              <Button sx={{color: "primary.contrastText"}}>Login</Button>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Ashton Murphy
+            </Typography>
+              <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>About Me</Button>
+              <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Blog Posts</Button>
+              <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Credits</Button>
           </Toolbar>
         </AppBar>
       </Box>
