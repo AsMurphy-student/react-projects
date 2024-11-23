@@ -5,7 +5,7 @@ import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Pape
 import ButtonAppBar from './components/AppBar';
 import StickyFooter from './components/Footer';
 
-import "./fonts/MartianMonoVF.ttf";
+//import MartianMono from "./fonts/MartianMonoVF.ttf";
 import ReactDOM from 'react-dom';
 import Homepage from './Homepage';
 
@@ -15,6 +15,9 @@ const themes: Theme[] = [];
 const theme = createTheme({
   typography: {
     fontFamily: 'MartianMono',
+    h6: {
+      fontFamily: 'BoldBlock',
+    },
   },
   palette: {
     primary: {

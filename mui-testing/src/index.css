@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "MartianMono";   /*Can be any text*/
+  font-family: "MartianMono";
+  font-style: normal;
   src: local("MartianMono"),
     url("./fonts/MartianMonoVF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BoldBlock";
+  font-style: normal;
+  src: local("BoldBlock"),
+    url("./fonts/Bold\ Block.ttf") format("truetype");
 }
