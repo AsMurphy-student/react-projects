@@ -6,13 +6,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { createTheme, MenuItem, Select } from '@mui/material';
+import { createTheme, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { Theme, ThemeProvider } from '@emotion/react';
 import Grid from '@mui/material/Grid2';
 
-export default function ButtonAppBar(props: {theme: Theme}) {
+export default function ButtonAppBar(props: {theme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
-  
+  const [selectIndex, setSelectIndex] = React.useState(props.currentTheme);
 
   return (
     <ThemeProvider theme={props.theme}>
@@ -37,15 +37,19 @@ export default function ButtonAppBar(props: {theme: Theme}) {
               </Grid>
               <Grid size={1} sx={{border: 1}} display='flex' justifyContent='center'>
                 <Select
+                  sx={{color: "primary.contrastText"}}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={10}
+                  value={selectIndex.toString()}
                   label="Age"
-                  //onChange={handleChange}
+                  onChange={(event: SelectChangeEvent) => {
+                    setSelectIndex(+event.target.value);
+                    props.updateTheme(+event.target.value);
+                  }}
                 >
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
+                  <MenuItem value={0}>Default</MenuItem>
+                  <MenuItem value={1}>Alternate</MenuItem>
+                  {/* <MenuItem value={2}>Thirty</MenuItem> */}
                 </Select>
               </Grid>
               <Grid size={1} sx={{border: 1}} display='flex' justifyContent='right'>
