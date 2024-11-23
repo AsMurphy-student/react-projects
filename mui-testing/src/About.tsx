@@ -6,20 +6,17 @@ import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Pape
 //import "./fonts/MartianMonoVF.ttf";
 import ReactDOM from 'react-dom';
 import ButtonAppBar from './components/AppBar';
-import StickyFooter from './components/Footer';
 
-function Homepage(props: {theme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
+function About(props: {theme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
   return (
     <div>
       <ButtonAppBar theme={props.theme} updateTheme={props.updateTheme} currentTheme={props.currentTheme}/>
       <ThemeProvider theme={props.theme}>
-        <Typography variant="h3" component="div" align="left">Homepage</Typography>
+        <Typography variant="h3" component="div" align="left">About Page</Typography>
       </ThemeProvider>
-
-      <StickyFooter theme={props.theme} />
     </div>
   )
 }
 
-export default Homepage;
+export default About;

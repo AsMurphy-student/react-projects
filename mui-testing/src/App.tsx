@@ -8,6 +8,8 @@ import StickyFooter from './components/Footer';
 //import MartianMono from "./fonts/MartianMonoVF.ttf";
 import ReactDOM from 'react-dom';
 import Homepage from './Homepage';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import About from './About';
 
 const themes: Theme[] = [];
 
@@ -119,7 +121,17 @@ function App() {
     // <div>
     //   <ButtonAppBar theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex}/>
     // </div>
-    <Homepage theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />
+    //<Homepage theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />
+
+    // ReactDOM.createRoot(root).render(
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
+          <Route path="about" element={<About theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />}/>
+        </Routes>
+      </BrowserRouter>
+    // );
+    
   )
 }
 
