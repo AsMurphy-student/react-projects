@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-projects/static/css/main.dc62d83c.css",
+    "main.js": "/react-projects/static/js/main.d0a1def9.js",
+    "static/js/453.c02417b7.chunk.js": "/react-projects/static/js/453.c02417b7.chunk.js",
+    "static/media/MartianMonoVF.ttf": "/react-projects/static/media/MartianMonoVF.22d8071456bd37b59b4f.ttf",
+    "static/media/Bold Block.ttf": "/react-projects/static/media/Bold Block.e5206b4aa6a6cbc88550.ttf",
+    "index.html": "/react-projects/index.html",
+    "main.dc62d83c.css.map": "/react-projects/static/css/main.dc62d83c.css.map",
+    "main.d0a1def9.js.map": "/react-projects/static/js/main.d0a1def9.js.map",
+    "453.c02417b7.chunk.js.map": "/react-projects/static/js/453.c02417b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc62d83c.css",
+    "static/js/main.d0a1def9.js"
+  ]
+}
