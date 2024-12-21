@@ -33,11 +33,11 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
 
             <Grid container spacing={3} columns={3} size="grow" direction="row" justifyContent="center" alignItems="center">
               <Grid size={1} sx={{border: 1, py: 'auto'}}>
-                <Typography variant="h6" component="div" align="left"> 
+                <Typography variant="h3" component="div" align="left"> 
                   Ashton Murphy
                 </Typography>
               </Grid>
-              <Grid size={1} sx={{border: 1}} display='flex' justifyContent='center'>
+              <Grid size={1} display='flex' justifyContent='center'>
                 <Select
                   sx={{color: "primary.contrastText"}}
                   labelId="demo-simple-select-label"
@@ -56,7 +56,7 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
               </Grid>
               <Grid size={1} sx={{border: 1}} display='flex' justifyContent='right'>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("/")}}>Home</Button>
-                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("about")}}>About Me</Button>
+                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("/about")}}>About Me</Button>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Blog Posts</Button>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Credits</Button>
               </Grid>

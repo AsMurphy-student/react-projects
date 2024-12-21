@@ -8,12 +8,12 @@ import ReactDOM from 'react-dom';
 import ButtonAppBar from './components/AppBar';
 import StickyFooter from './components/Footer';
 
-function Homepage(props: {headerTheme: Theme, footerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
+function Homepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
   return (
     <div>
       <ButtonAppBar headerTheme={props.headerTheme} updateTheme={props.updateTheme} currentTheme={props.currentTheme}/>
-      <ThemeProvider theme={props.headerTheme}>
+      <ThemeProvider theme={props.bodyTheme}>
         <Typography variant="h3" component="div" align="left">Homepage</Typography>
       </ThemeProvider>
 

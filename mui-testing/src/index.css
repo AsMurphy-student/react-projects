@@ -14,3 +14,9 @@
   src: local("BoldBlock"),
     url("./fonts/Bold\ Block.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Playball";
+  font-style: normal;
+  src: local("Playball"),
+    url("./fonts/Playball.ttf") format("truetype");
+}
