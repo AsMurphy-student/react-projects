@@ -10,10 +10,15 @@ import { createTheme, MenuItem, Select, SelectChangeEvent } from '@mui/material'
 import { Theme, ThemeProvider } from '@emotion/react';
 import Grid from '@mui/material/Grid2';
 import { Navigate, useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
-  const [selectIndex, setSelectIndex] = React.useState(props.currentTheme);
+  //const [selectIndex, setSelectIndex] = React.useState(0);
+  // useEffect(() => {
+  //   setSelectIndex(props.currentTheme);
+  // }, []);
+  
   const navigate = useNavigate();
 
   return (
@@ -28,7 +33,7 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon />
+              <MenuIcon />selectIndex.toString()
             </IconButton> */}
 
             <Grid container spacing={3} columns={3} size="grow" direction="row" justifyContent="center" alignItems="center">
@@ -42,10 +47,9 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
                   sx={{color: "primary.contrastText"}}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={selectIndex.toString()}
-                  label="Age"
+                  value={props.currentTheme.toString()}
+                  label="Theme"
                   onChange={(event: SelectChangeEvent) => {
-                    setSelectIndex(+event.target.value);
                     props.updateTheme(+event.target.value);
                   }}
                 >
