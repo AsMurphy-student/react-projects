@@ -21,15 +21,15 @@ const defaultHeaderTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#C2EFB3",
+      main: "#81b29a",
       light: "#000",
       dark: "#000",
-      contrastText: "#FFF",
+      contrastText: "#f4f1de",
     },
     secondary: {
-      main: "#011638",
+      main: "#e07a5f",
       light: "#000",
-      dark: "#000",
+      dark: "#BB3E1D",
       contrastText: "#FFF",
     },
   },
@@ -65,10 +65,10 @@ const defaultFooterTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#666",
+      main: "#3d405b",
       light: "#000",
       dark: "#000",
-      contrastText: "#FFF",
+      contrastText: "#F2F2F2",
     },
     secondary: {
       main: "#011638",

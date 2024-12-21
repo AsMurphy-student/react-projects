@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { createTheme, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import { createTheme, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import { Theme, ThemeProvider } from '@emotion/react';
 import Grid from '@mui/material/Grid2';
 import { Navigate, useNavigate } from 'react-router';
@@ -37,14 +37,16 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
             </IconButton> */}
 
             <Grid container spacing={3} columns={3} size="grow" direction="row" justifyContent="center" alignItems="center">
-              <Grid size={1} sx={{border: 1, py: 'auto'}}>
-                <Typography variant="h3" component="div" align="left"> 
+              <Grid size={1}>
+                <Typography variant="h3" component="div" align="left" color='primary.contrastText'> 
                   Ashton Murphy
                 </Typography>
               </Grid>
               <Grid size={1} display='flex' justifyContent='center'>
+                <FormControl variant="filled">
+                <InputLabel id="demo-simple-select-label" color='secondary' sx={{color: "primary.contrastText"}}>Theme</InputLabel>
                 <Select
-                  sx={{color: "primary.contrastText"}}
+                  sx={{color: "primary"}}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={props.currentTheme.toString()}
@@ -57,12 +59,13 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
                   <MenuItem value={1}>Alternate</MenuItem>
                   {/* <MenuItem value={2}>Thirty</MenuItem> */}
                 </Select>
+                </FormControl>
               </Grid>
-              <Grid size={1} sx={{border: 1}} display='flex' justifyContent='right'>
-                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("/")}}>Home</Button>
-                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("/about")}}>About Me</Button>
-                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Blog Posts</Button>
-                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Credits</Button>
+              <Grid size={1} container spacing={3} display='flex' justifyContent='right'>
+                <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Home</Button>
+                <Button variant="contained" color="secondary" onClick={() => {navigate("/about")}}>About Me</Button>
+                <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Blog Posts</Button>
+                <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Credits</Button>
               </Grid>
             </Grid>
             
