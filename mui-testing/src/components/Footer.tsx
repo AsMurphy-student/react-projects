@@ -26,6 +26,7 @@ function Copyright() {
 
 export default function StickyFooter(props: {footerTheme: Theme}) {
   const navigate = useNavigate();
+
   return (
     <ThemeProvider theme={props.footerTheme}>
       <Box
@@ -51,10 +52,10 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
 
 
             <Grid container spacing={3} columns={3} size="grow" direction="row" justifyContent="center" alignItems="center">
-              <Grid size={1} sx={{border: 1, py: 'auto'}} display='flex' justifyContent='right'>
+              <Grid size={1} display='flex' justifyContent='right'>
                 
               </Grid>
-              <Grid size={1} sx={{border: 1, py: 'auto'}}>
+              <Grid size={1}>
                 <Typography variant="h3" component="div" align="center" color='primary.contrastText'> 
                   Ashton Murphy
                 </Typography>
@@ -64,8 +65,10 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
                 et nunc. Sed sit amet magna quis metus vestibulum suscipit non ut sem. Donec. 
                 </Typography>
                 <Stack direction="row" spacing={2} alignItems={"center" } justifyContent="center">
-                  <IconButton sx={{color: "primary.contrastText"}}>
-                    <LinkedInIcon fontSize="large" />
+                  <IconButton>
+                    <Link href="https://www.linkedin.com/in/ashton-murphy-57605424a/" target="_blank">
+                      <LinkedInIcon fontSize="large" sx={{color: "primary.contrastText"}} />
+                    </Link>
                   </IconButton>
                   <IconButton sx={{color: "primary.contrastText"}}>
                     <GitHubIcon fontSize="large" />
@@ -73,7 +76,7 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
                 </Stack>
                 {Copyright()}
               </Grid>
-              <Grid size={1} sx={{border: 1, py: 'auto'}} display='flex' justifyContent='center'>
+              <Grid size={1} display='flex' justifyContent='center'>
                 
               </Grid>
             </Grid>
