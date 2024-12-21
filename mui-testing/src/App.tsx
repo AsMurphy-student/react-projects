@@ -11,12 +11,10 @@ import Homepage from './Homepage';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import About from './About';
 
-const themes: Theme[] = [];
-
-
-const theme = createTheme({
+const defaultHeaderTheme = createTheme({
   typography: {
-    fontFamily: 'MartianMono',
+    fontFamily: 'MartianMono', 
+
     h6: {
       fontFamily: 'BoldBlock',
     },
@@ -34,35 +32,10 @@ const theme = createTheme({
       dark: "#000",
       contrastText: "#FFF",
     },
-    error: {
-      main: "#d32f2f",
-      light: "#ef5350",
-      dark: "#c62828",
-      contrastText: "#FFF",
-    },
-    warning: {
-      main: "#ed6c02",
-      light: "#ff9800",
-      dark: "#e65100",
-      contrastText: "#FFF",
-    },
-    info: {
-      main: "#0288d1",
-      light: "#03a9f4",
-      dark: "#01579b",
-      contrastText: "#FFF",
-    },
-    success: {
-      main: "#2e7d32",
-      light: "#4caf50",
-      dark: "#1b5e20",
-      contrastText: "#FFF",
-    },
   },
 });
-themes.push(theme);
 
-const secondtheme = createTheme({
+const defaultFooterTheme = createTheme({
   typography: {
     fontFamily: 'MartianMono',
   },
@@ -79,33 +52,57 @@ const secondtheme = createTheme({
       dark: "#000",
       contrastText: "#FFF",
     },
-    error: {
-      main: "#d32f2f",
-      light: "#ef5350",
-      dark: "#c62828",
+  },
+});
+
+const alternateHeaderTheme = createTheme({
+  typography: {
+    fontFamily: 'MartianMono', 
+
+    h6: {
+      fontFamily: 'BoldBlock',
+    },
+  },
+  palette: {
+    primary: {
+      main: "#000",
+      light: "#000",
+      dark: "#000",
       contrastText: "#FFF",
     },
-    warning: {
-      main: "#ed6c02",
-      light: "#ff9800",
-      dark: "#e65100",
-      contrastText: "#FFF",
-    },
-    info: {
-      main: "#0288d1",
-      light: "#03a9f4",
-      dark: "#01579b",
-      contrastText: "#FFF",
-    },
-    success: {
-      main: "#2e7d32",
-      light: "#4caf50",
-      dark: "#1b5e20",
+    secondary: {
+      main: "#011638",
+      light: "#000",
+      dark: "#000",
       contrastText: "#FFF",
     },
   },
 });
-themes.push(secondtheme);
+
+const alternateFooterTheme = createTheme({
+  typography: {
+    fontFamily: 'MartianMono',
+  },
+  palette: {
+    primary: {
+      main: "#000",
+      light: "#000",
+      dark: "#000",
+      contrastText: "#FFF",
+    },
+    secondary: {
+      main: "#011638",
+      light: "#000",
+      dark: "#000",
+      contrastText: "#FFF",
+    },
+  },
+});
+
+const themes: Theme[][] = [
+  [defaultHeaderTheme, defaultFooterTheme],
+  [alternateHeaderTheme, alternateFooterTheme]
+];
 
 function App() {
   const [themeIndex, setThemeIndex] = useState(0);
@@ -126,8 +123,14 @@ function App() {
     // ReactDOM.createRoot(root).render(
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
-          <Route path="about" element={<About theme={themes[themeIndex]} updateTheme={setThemeIndex} currentTheme={themeIndex} />}/>
+          <Route path="/" element={<Homepage 
+          headerTheme={themes[themeIndex][0]} 
+          footerTheme={themes[themeIndex][1]}
+          updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
+          <Route path="about" element={<About 
+          headerTheme={themes[themeIndex][0]} 
+          footerTheme={themes[themeIndex][1]}
+          updateTheme={setThemeIndex} currentTheme={themeIndex} />}/>
         </Routes>
       </BrowserRouter>
     // );

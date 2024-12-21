@@ -11,13 +11,13 @@ import { Theme, ThemeProvider } from '@emotion/react';
 import Grid from '@mui/material/Grid2';
 import { Navigate, useNavigate } from 'react-router';
 
-export default function ButtonAppBar(props: {theme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
+export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
   const [selectIndex, setSelectIndex] = React.useState(props.currentTheme);
   const navigate = useNavigate();
 
   return (
-    <ThemeProvider theme={props.theme}>
+    <ThemeProvider theme={props.headerTheme}>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -55,6 +55,7 @@ export default function ButtonAppBar(props: {theme: Theme, updateTheme: React.Di
                 </Select>
               </Grid>
               <Grid size={1} sx={{border: 1}} display='flex' justifyContent='right'>
+                <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("/")}}>Home</Button>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}} onClick={() => {navigate("about")}}>About Me</Button>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Blog Posts</Button>
                 <Button sx={{color: "primary.contrastText", textDecorationLine: 'underline'}}>Credits</Button>

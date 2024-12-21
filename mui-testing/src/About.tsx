@@ -7,12 +7,12 @@ import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Pape
 import ReactDOM from 'react-dom';
 import ButtonAppBar from './components/AppBar';
 
-function About(props: {theme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
+function About(props: {headerTheme: Theme, footerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
 
   return (
     <div>
-      <ButtonAppBar theme={props.theme} updateTheme={props.updateTheme} currentTheme={props.currentTheme}/>
-      <ThemeProvider theme={props.theme}>
+      <ButtonAppBar headerTheme={props.headerTheme} updateTheme={props.updateTheme} currentTheme={props.currentTheme}/>
+      <ThemeProvider theme={props.headerTheme}>
         <Typography variant="h3" component="div" align="left">About Page</Typography>
       </ThemeProvider>
     </div>

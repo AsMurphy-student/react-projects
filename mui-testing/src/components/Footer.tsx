@@ -5,6 +5,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid2';
+import { Button, MenuItem, Select } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 function Copyright() {
   return (
@@ -19,9 +22,10 @@ function Copyright() {
   );
 }
 
-export default function StickyFooter(props: {theme: Theme}) {
+export default function StickyFooter(props: {footerTheme: Theme}) {
+  const navigate = useNavigate();
   return (
-    <ThemeProvider theme={props.theme}>
+    <ThemeProvider theme={props.footerTheme}>
       <Box
         sx={{
           display: 'flex',
@@ -29,48 +33,6 @@ export default function StickyFooter(props: {theme: Theme}) {
           minHeight: '100vh',
         }}
       >
-        {/* <CssBaseline />
-        <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-          <Typography variant="h2" component="h1" gutterBottom>
-            Sticky footer
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-            {'Pin a footer to the bottom of the viewport.'}
-            {'The footer will move as the main element of the page grows.'}
-          </Typography>
-          <Typography variant="body1">Sticky footer placeholder.</Typography>
-        </Container> */}
-        
         <Box
           component="footer"
           sx={{
@@ -79,11 +41,26 @@ export default function StickyFooter(props: {theme: Theme}) {
             mt: 'auto',
             backgroundColor: "secondary.main"}}
         >
-          <Container maxWidth="sm">
+          {/* <Container maxWidth="sm">
             <Typography variant="body1" sx={{color: "secondary.contrastText"}}>
               My sticky footer can be found here.
             </Typography>
-          </Container>
+          </Container> */}
+
+
+            <Grid container spacing={3} columns={3} size="grow" direction="row" justifyContent="center" alignItems="center">
+              <Grid size={1} sx={{border: 1, py: 'auto'}}>
+                <Typography variant="h6" component="div" align="left" color='primary.contrastText'> 
+                  Ashton Murphy
+                </Typography>
+              </Grid>
+              <Grid size={1} sx={{border: 1}} display='flex' justifyContent='center'>
+
+              </Grid>
+              <Grid size={1} sx={{border: 1}} display='flex' justifyContent='right'>
+                
+              </Grid>
+            </Grid>
         </Box>
       </Box>
     </ThemeProvider>
