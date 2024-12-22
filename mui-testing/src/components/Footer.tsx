@@ -33,7 +33,7 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '100vh',
+          minHeight: '10vh',
         }}
       >
         <Box

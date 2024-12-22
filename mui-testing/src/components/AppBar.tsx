@@ -64,7 +64,6 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
               <Grid size={1} container spacing={3} display='flex' justifyContent='right'>
                 <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Home</Button>
                 <Button variant="contained" color="secondary" onClick={() => {navigate("/about")}}>About Me</Button>
-                <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Blog Posts</Button>
                 <Button variant="contained" color="secondary" onClick={() => {navigate("/")}}>Credits</Button>
               </Grid>
             </Grid>

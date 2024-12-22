@@ -14,7 +14,12 @@ function Homepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTheme: The
     <div>
       <ButtonAppBar headerTheme={props.headerTheme} updateTheme={props.updateTheme} currentTheme={props.currentTheme}/>
       <ThemeProvider theme={props.bodyTheme}>
-        <Typography variant="h3" component="div" align="left">Homepage</Typography>
+        <Box sx={{ flexGrow: 1, pt: '2rem', backgroundColor: 'secondary.main' }}>
+          <Typography variant="h3" component="h3" align="center">Newest Article</Typography>
+            <Box sx={{ border: 5, mt: '2rem', mx: '10rem', p: '1rem', backgroundColor: 'primary.main' }}>
+              <Typography variant="h5" component="h5" align="left">Optimization of Loading and Off-Loading of Trains - Factorio Macro-Logisitics</Typography>
+            </Box>
+        </Box>
       </ThemeProvider>
 
       <StickyFooter footerTheme={props.footerTheme} />

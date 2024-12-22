@@ -38,6 +38,10 @@ const defaultHeaderTheme = createTheme({
 const defaultBodyTheme = createTheme({
   typography: {
     fontFamily: 'MartianMono',
+
+    h1: {
+      fontFamily: 'Playball',
+    },
   },
   palette: {
     primary: {
@@ -47,7 +51,7 @@ const defaultBodyTheme = createTheme({
       contrastText: "#FFF",
     },
     secondary: {
-      main: "#011638",
+      main: "#A491D3",
       light: "#000",
       dark: "#000",
       contrastText: "#FFF",
@@ -149,7 +153,7 @@ const alternateFooterTheme = createTheme({
 
 const themes: Theme[][] = [
   [defaultHeaderTheme, defaultBodyTheme, defaultFooterTheme],
-  [alternateHeaderTheme, defaultBodyTheme, alternateFooterTheme]
+  [alternateHeaderTheme, alternateBodyTheme, alternateFooterTheme]
 ];
 
 
