@@ -7,7 +7,7 @@ import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Pape
 import ReactDOM from 'react-dom';
 import ButtonAppBar from './components/AppBar';
 import StickyFooter from './components/Footer';
-import screenshot from './images/22-12-2024_21-02-45.png';
+import screenshot from './images/test.gif';
 
 function Homepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
   
