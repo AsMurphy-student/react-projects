@@ -15,7 +15,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="primary.contrastText" align='center'>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/#">
         Ashton Murphy
       </Link>{' '}
       {new Date().getFullYear()}
