@@ -42,6 +42,10 @@ const defaultBodyTheme = createTheme({
     h1: {
       fontFamily: 'Playball',
     },
+
+    body1: {
+      lineHeight: 2.5,
+    },
   },
   palette: {
     primary: {
