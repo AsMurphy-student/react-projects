@@ -7,9 +7,10 @@ import StickyFooter from './components/Footer';
 
 //import MartianMono from "./fonts/MartianMonoVF.ttf";
 import ReactDOM from 'react-dom';
-import Homepage from './Homepage';
+import MainHomepage from './Homepage';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import About from './About';
+import FactorioHomepage from './journal-homepages/Factorio-Homepage';
 
 const defaultHeaderTheme = createTheme({
   typography: {
@@ -97,13 +98,10 @@ const alternateHeaderTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#000",
-      light: "#000",
-      dark: "#000",
-      contrastText: "#FFF",
+      main: "#FF8A00",
     },
     secondary: {
-      main: "#011638",
+      main: "#000",
       light: "#000",
       dark: "#000",
       contrastText: "#FFF",
@@ -114,19 +112,21 @@ const alternateHeaderTheme = createTheme({
 const alternateBodyTheme = createTheme({
   typography: {
     fontFamily: 'MartianMono',
+
+    body1: {
+      lineHeight: 2.5,
+    },
   },
   palette: {
     primary: {
       main: "#000",
       light: "#000",
       dark: "#000",
-      contrastText: "#FFF",
     },
     secondary: {
-      main: "#011638",
+      main: "#FF8A00",
       light: "#000",
       dark: "#000",
-      contrastText: "#FFF",
     },
   },
 });
@@ -141,16 +141,14 @@ const alternateFooterTheme = createTheme({
   },
   palette: {
     primary: {
+      main: "#FF8A00",
+      light: "#000",
+      dark: "#000",
+    },
+    secondary: {
       main: "#000",
       light: "#000",
       dark: "#000",
-      contrastText: "#FFF",
-    },
-    secondary: {
-      main: "#011638",
-      light: "#000",
-      dark: "#000",
-      contrastText: "#FFF",
     },
   },
 });
@@ -171,7 +169,8 @@ function App() {
   const [themeIndex, setThemeIndex] = useState(0);
 
   useEffect(() => {
-    setThemeIndex(getRandomInt(0, 1));
+    // setThemeIndex(getRandomInt(0, 1));
+    setThemeIndex(1);
   }, []);
 
   return (
@@ -190,16 +189,22 @@ function App() {
     // ReactDOM.createRoot(root).render(
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage 
+          <Route path="/" element={<MainHomepage 
           headerTheme={themes[themeIndex][0]} 
           bodyTheme={themes[themeIndex][1]}
           footerTheme={themes[themeIndex][2]}
           updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
-          <Route path="about" element={<About 
+          <Route path="/about" element={<About 
           headerTheme={themes[themeIndex][0]} 
           bodyTheme={themes[themeIndex][1]}
           footerTheme={themes[themeIndex][2]}
           updateTheme={setThemeIndex} currentTheme={themeIndex} />}/>
+
+          <Route path="/factoriohomepage" element={<FactorioHomepage 
+          headerTheme={themes[themeIndex][0]} 
+          bodyTheme={themes[themeIndex][1]}
+          footerTheme={themes[themeIndex][2]}
+          updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
         </Routes>
       </BrowserRouter>
     // );

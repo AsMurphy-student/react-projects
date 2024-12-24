@@ -13,7 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="primary.contrastText" align='center'>
+    <Typography variant="body2" color="secondary.contrastText" align='center'>
       {'Copyright © '}
       <Link color="inherit" href="/#">
         Ashton Murphy
@@ -42,7 +42,7 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
             py: 3,
             px: 2,
             mt: 'auto',
-            backgroundColor: "primary.main"}}
+            backgroundColor: "secondary.main"}}
         >
           {/* <Container maxWidth="sm">
             <Typography variant="body1" sx={{color: "secondary.contrastText"}}>
@@ -56,10 +56,10 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
                 
               </Grid>
               <Grid size={1}>
-                <Typography variant="h3" component="div" align="center" color='primary.contrastText'> 
+                <Typography variant="h3" component="div" align="center" color='primary.main'> 
                   Ashton Murphy
                 </Typography>
-                <Typography variant="subtitle2" component="div" align="center" color='primary.contrastText'> 
+                <Typography variant="subtitle2" component="div" align="center" color='secondary.contrastText'> 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id venenatis ipsum. Morbi 
                 dignissim sed magna at posuere. Phasellus velit nulla, ullamcorper quis scelerisque ut, tempus 
                 et nunc. Sed sit amet magna quis metus vestibulum suscipit non ut sem. Donec. 
@@ -67,11 +67,11 @@ export default function StickyFooter(props: {footerTheme: Theme}) {
                 <Stack direction="row" spacing={2} alignItems={"center" } justifyContent="center">
                   <IconButton>
                     <Link href="https://www.linkedin.com/in/ashton-murphy-57605424a/" target="_blank">
-                      <LinkedInIcon fontSize="large" sx={{color: "primary.contrastText"}} />
+                      <LinkedInIcon fontSize="large" sx={{color: "secondary.contrastText"}} />
                     </Link>
                   </IconButton>
-                  <IconButton sx={{color: "primary.contrastText"}}>
-                    <GitHubIcon fontSize="large" />
+                  <IconButton>
+                    <GitHubIcon fontSize="large" sx={{color: "secondary.contrastText"}} />
                   </IconButton>
                 </Stack>
                 {Copyright()}
