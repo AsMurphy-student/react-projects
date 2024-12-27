@@ -38,8 +38,8 @@ function MainHomepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTheme:
 
               <Box sx={{width: '50%'}}><img src={screenshot} alt="" /></Box>
               
-            </Stack>
-          </Box>
+          </Stack>
+        </Box>
 
           {/* Newest Article Section */}
           <Typography variant="h3" component="h3" align="center" color='secondary.contrastText' pt={'4rem'}>Article Journals</Typography>

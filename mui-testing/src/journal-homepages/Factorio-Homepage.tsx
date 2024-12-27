@@ -20,6 +20,27 @@ function FactorioHomepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTh
           {/* Newest Article Section */}
           <Box sx={{ border: 5, mx: '10rem', p: '1rem', backgroundColor: 'primary.main' }}>
           <Stack direction="row" sx={{flexGrow: 1}}>
+            <Box sx={{width: '50%'}}><img src={screenshot} alt="" /></Box>
+            
+            <Container sx={{flexGrow: 1}}>
+              <Typography variant="h5" component="h5" align="left" color='primary.contrastText'>Factorio Logistics</Typography>
+                <Typography variant="h6" component="h6" align="left" color='primary.contrastText' sx={{flexGrow: 1, mt: 5}}>Newest Edition: 01, Jan, 2025</Typography>
+
+              <Typography variant="body1" component="p" align="left" color='primary.contrastText' sx={{mt: 5}}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin mi vitae massa facilisis volutpat. Aliquam tempus iaculis augue, vitae sollicitudin tellus mollis id. 
+              Nam nulla metus, bibendum eget efficitur ac, sagittis vel ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae nibh vel purus sollicitudin semper. Fusce sit 
+              amet lectus id ante dignissim fermentum eget sit amet ipsum. Nullam mollis ornare turpis, quis aliquam leo sodales eu. Nullam aliquet porta augue, non condimentum lectus. Nullam 
+              justo tortor, lobortis id posuere at, condimentum consectetur metus. 
+              </Typography>
+            </Container>
+            </Stack>
+          </Box>
+          
+          {/* Newest Article Section */}
+          <Typography variant="h3" component="h3" align="center" color='secondary.contrastText' pt={'2rem'}>Newest Articles</Typography>
+          
+          <Box sx={{ border: 5, mt: '2rem', mx: '10rem', p: '1rem', backgroundColor: 'primary.main' }}>
+          <Stack direction="row" sx={{flexGrow: 1}}>
               <Container sx={{flexGrow: 1}}>
                 <Typography variant="h5" component="h5" align="left" color='primary.contrastText'>Optimization of Loading and Off-Loading of Trains</Typography>
                 <Stack direction="row" sx={{flexGrow: 1, mt: 3}}>
@@ -37,7 +58,29 @@ function FactorioHomepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTh
 
               <Box sx={{width: '50%'}}><img src={screenshot} alt="" /></Box>
               
-            </Stack>
+          </Stack>
+          </Box>
+
+          <Box sx={{ border: 5, mt: '2rem', mx: '10rem', p: '1rem', backgroundColor: 'primary.main' }}>
+          <Stack direction="row" sx={{flexGrow: 1}}>
+              <Container sx={{flexGrow: 1}}>
+                <Typography variant="h5" component="h5" align="left" color='primary.contrastText'>Optimization of Loading and Off-Loading of Trains</Typography>
+                <Stack direction="row" sx={{flexGrow: 1, mt: 3}}>
+                  <Typography variant="h6" component="h6" align="left" color='primary.contrastText' sx={{flexGrow: 1}}>Factorio Logistics</Typography>
+                  <Typography variant="h6" component="h6" align="right" color='primary.contrastText'>01, Jan, 2025</Typography>
+                </Stack>
+
+                <Typography variant="body1" component="p" align="left" color='primary.contrastText' sx={{mt: 5}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin mi vitae massa facilisis volutpat. Aliquam tempus iaculis augue, vitae sollicitudin tellus mollis id. 
+                Nam nulla metus, bibendum eget efficitur ac, sagittis vel ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae nibh vel purus sollicitudin semper. Fusce sit 
+                amet lectus id ante dignissim fermentum eget sit amet ipsum. Nullam mollis ornare turpis, quis aliquam leo sodales eu. Nullam aliquet porta augue, non condimentum lectus. Nullam 
+                justo tortor, lobortis id posuere at, condimentum consectetur metus. 
+                </Typography>
+              </Container>
+
+              <Box sx={{width: '50%'}}><img src={screenshot} alt="" /></Box>
+              
+          </Stack>
           </Box>
             
         </Box>

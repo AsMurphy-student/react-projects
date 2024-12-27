@@ -100,10 +100,10 @@ export default function ButtonAppBar(props: {headerTheme: Theme, updateTheme: Re
                 >
                   <MenuItem onClick={() => {
                     handleClose();
-                    navigate("/about");
-                  }}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    navigate("/factoriohomepage");
+                  }}>Factorio Logistics</MenuItem>
+                  {/* <MenuItem onClick={handleClose}>My account</MenuItem>
+                  <MenuItem onClick={handleClose}>Logout</MenuItem> */}
                 </Menu>
 
                 <Button variant="contained" color="primary" onClick={() => {navigate("/about")}}>About Me</Button>
