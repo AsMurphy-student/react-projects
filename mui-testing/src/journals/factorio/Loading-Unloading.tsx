@@ -76,6 +76,43 @@ function LoadingOffloading(props: {headerTheme: Theme, bodyTheme: Theme, footerT
               Same but fluid trains
               much simpler
 
+            
+            Writing Test
+            
+            (Title Gif shows multiple trains stopping and dropping off consistently)
+
+            Optimizing Station Priority and Train Loading and Offloading to Increase Overall Logistical Throughput
+            
+            Factorio is quite an interesting game with innovating and iterating on creative solutions 
+            to solve different problems. It is a constantly feedback loop where you'll fix a problem 
+            such as increasing production of some item which is in demand, or not being produced enough to meet 
+            the current demand, and in the process of fixing this problem you'll often have another item likWhewise 
+            not meet the demand as a result of increasing production of another item.
+
+            This presents a scalability issue with production of items in your factory and if you're 
+            eyeing to ultimately increase your production with the goal of increasing your science per 
+            minute production. For those that are not familiar with Factorio, science is generally what 
+            you want to increase as your save file continues. Science allows your to unlock new technologies 
+            such as faster conveyor belts and faster inserters which increase throughput and how fast items 
+            move within your factory. Conveyor belts can quickly be hard to manage and get very messy 
+            (or as some would say become spagetti) and changing their designs can be hard. They also can 
+            be very difficult to move items across long distances which becomes a bigger problem as 
+            resource veins are depleted.
+
+            (Gif showing how messy conveyor belts can become)
+
+            How do Trains work and How can they efficiently choose their stop?
+
+            Another research from science can help fix these problems of scaling, long distance transportation, 
+            and design management and this research technology is trains. While conveyors belts are slow they 
+            are consistent. Trains, on the other hand, are significantly faster than conveyors and can move 
+            more items, however the time of transport is not fixed as many trains can run on the same system 
+            and affect each other's travel times. While there are many resources discussing train signalling 
+            and junctions, I will be focusing on stop allocation along with optimizing how trains are loaded 
+            and unloaded. First it will be important to go over how trains work.
+
+            
+
           */}
             
         </Box>
