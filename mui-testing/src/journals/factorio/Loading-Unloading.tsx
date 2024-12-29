@@ -54,8 +54,27 @@ function LoadingOffloading(props: {headerTheme: Theme, bodyTheme: Theme, footerT
           </Box>
 
           {/* 
-            Outline:
-            
+            Outline: V0.1
+            Introduction
+              Explain how production shifts to involve more with trains
+                From small distance to large distance
+                Also helps with scalability and creating modular components
+            Optimizing Train Station Selection
+              Before optimizing loading and offloading first focus on circuitry required for station priority
+              Explain the need for station prioritization and how it helps with scaling
+              Start with different examples of circuitry
+                Sum of all chests
+                  Explain possible problem if the inputs are not depleted evenly
+                  Train cannot offload as quickly
+                Chest groups
+                  Trains will not stop if not all inputs can be depleted at the same speed
+                  Will keep trains going at a steady speed
+            Optimizing Train loading and offloading
+              Loading
+              Offloading
+            Fluid Trains
+              Same but fluid trains
+              much simpler
 
           */}
             
