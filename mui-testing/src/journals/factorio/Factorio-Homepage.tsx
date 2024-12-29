@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './../App.css';
-import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Paper, SelectChangeEvent, Stack, styled, Theme, ThemeProvider, Typography } from '@mui/material';
+import './../../App.css';
+import { AppBar, Box, Card, CardMedia, Chip, Container, createTheme, Grid2, Link, Paper, SelectChangeEvent, Stack, styled, Theme, ThemeProvider, Typography } from '@mui/material';
+
+import {
+  Link as RouterLink
+} from 'react-router';
 
 //import "./fonts/MartianMonoVF.ttf";
 import ReactDOM from 'react-dom';
-import ButtonAppBar from './../components/AppBar';
-import StickyFooter from './../components/Footer';
-import screenshot from './../images/test.gif';
+import ButtonAppBar from '../../components/AppBar';
+import StickyFooter from '../../components/Footer';
+import screenshot from './../../images/test.gif';
 
 function FactorioHomepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTheme: Theme, updateTheme: React.Dispatch<React.SetStateAction<number>>, currentTheme: number}) {
   
@@ -42,7 +46,7 @@ function FactorioHomepage(props: {headerTheme: Theme, bodyTheme: Theme, footerTh
           <Box sx={{ border: 5, mt: '2rem', mx: '10rem', p: '1rem', backgroundColor: 'primary.main' }}>
           <Stack direction="row" sx={{flexGrow: 1}}>
               <Container sx={{flexGrow: 1}}>
-                <Typography variant="h5" component="h5" align="left" color='primary.contrastText'>Optimization of Loading and Off-Loading of Trains</Typography>
+                <Link variant='h5' color='primary.contrastText' component={RouterLink} to="/loading-offloading">Optimization of Loading and Off-Loading of Trains</Link>
                 <Stack direction="row" sx={{flexGrow: 1, mt: 3}}>
                   <Typography variant="h6" component="h6" align="left" color='primary.contrastText' sx={{flexGrow: 1}}>Factorio Logistics</Typography>
                   <Typography variant="h6" component="h6" align="right" color='primary.contrastText'>01, Jan, 2025</Typography>

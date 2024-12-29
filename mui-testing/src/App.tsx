@@ -10,7 +10,8 @@ import ReactDOM from 'react-dom';
 import MainHomepage from './Homepage';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import About from './About';
-import FactorioHomepage from './journal-homepages/Factorio-Homepage';
+import FactorioHomepage from './journals/factorio/Factorio-Homepage';
+import LoadingOffloading from './journals/factorio/Loading-Unloading';
 
 const defaultHeaderTheme = createTheme({
   typography: {
@@ -201,6 +202,11 @@ function App() {
           updateTheme={setThemeIndex} currentTheme={themeIndex} />}/>
 
           <Route path="/factoriohomepage" element={<FactorioHomepage 
+          headerTheme={themes[themeIndex][0]} 
+          bodyTheme={themes[themeIndex][1]}
+          footerTheme={themes[themeIndex][2]}
+          updateTheme={setThemeIndex} currentTheme={themeIndex} />} />
+          <Route path="/loading-offloading" element={<LoadingOffloading 
           headerTheme={themes[themeIndex][0]} 
           bodyTheme={themes[themeIndex][1]}
           footerTheme={themes[themeIndex][2]}
